@@ -1,24 +1,33 @@
 package com;
 
-public class LibroTextoUNIAC extends LibroTexto {
+// Clase LibroTexto: hereda de Libro y agrega el atributo "curso".
+// Es la clase intermedia que necesita LibroTextoUNIAC para heredar (Persona 2).
+public class LibroTexto extends Libro {
 
-    private String facultad;
+    private String curso;
 
-    public LibroTextoUNIAC(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso, String facultad) {
-        super(titulo, autor, numEjemplares, numEjemplaresPrestados, curso);
-        this.facultad = facultad;
+    // Constructor vacío
+    public LibroTexto() {
+        super();
+        this.curso = "";
     }
 
-    public String getFacultad() {
-        return facultad;
+    // Constructor con parámetros: reutiliza el constructor de Libro con super()
+    public LibroTexto(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso) {
+        super(titulo, autor, numEjemplares, numEjemplaresPrestados);
+        this.curso = curso;
     }
 
-    public void setFacultad(String facultad) {
-        this.facultad = facultad;
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "\nFacultad que lo publicó: " + facultad;
+        return super.toString() + "\nCurso: " + curso;
     }
 }
