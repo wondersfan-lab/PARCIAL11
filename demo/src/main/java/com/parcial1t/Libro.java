@@ -26,7 +26,7 @@ public class Libro {
         this.numEjemplaresPrestados = numEjemplaresPrestados;
     }
 
-    // Getters y setters de cada atributo (obligatorio por el enunciado)
+    // Getters y setters de cada atributo 
     public String getTitulo() {
         return titulo;
     }
@@ -60,8 +60,7 @@ public class Libro {
     }
 
     // Presta un libro: solo se puede si hay ejemplares disponibles
-    // (ejemplares totales menos los que ya están prestados).
-    // Devuelve true si el préstamo se pudo realizar, false si no.
+
     public boolean prestamo() {
         int disponibles = numEjemplares - numEjemplaresPrestados;
         if (disponibles > 0) {
