@@ -1,11 +1,14 @@
-package com;
+package com.parcial1t;
 
-public class LibroTextoUNIAC extends LibroTexto {
+public class LibroTextoUNIAJC extends LibroTexto {
 
     private String facultad;
 
-    public LibroTextoUNIAC(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso, String facultad) {
+    public LibroTextoUNIAJC(String titulo, String autor, int numEjemplares, int numEjemplaresPrestados, String curso, String facultad) {
+        // super() ahora llama al constructor de LibroTexto (le pasa 5 datos)
         super(titulo, autor, numEjemplares, numEjemplaresPrestados, curso);
+        
+        // Guardamos el dato exclusivo de esta clase
         this.facultad = facultad;
     }
 

@@ -1,4 +1,4 @@
-package com;
+package com.parcial1t;
 
 // Clase Libro: encapsula los datos y el comportamiento comunes a todo libro.
 // Los atributos son privados (encapsulamiento) y solo se acceden mediante get/set.
